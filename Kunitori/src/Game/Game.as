@@ -18,6 +18,7 @@ package Game {
 			var window:Window = new Window(world);
 
 			addChild(window.returnBM());
+			//
 		}
 	}
 }
