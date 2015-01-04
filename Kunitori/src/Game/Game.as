@@ -1,0 +1,23 @@
+package Game {
+	import flash.display.Sprite;
+	import Game.Window;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	
+	//Game オブジェクト
+	public class Game extends Sprite {
+
+		//コンストラクタ
+		public function Game()
+		{
+			// World を作成し, Window に表示
+			var world:World = new World();
+			var window:Window = new Window(world);
+
+			addChild(window.returnBM());
+		}
+	}
+}
