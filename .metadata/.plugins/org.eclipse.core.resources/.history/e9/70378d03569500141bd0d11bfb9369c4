@@ -19,12 +19,7 @@ package World {
 		const WORLD_SIZE_LARGE:int = 5;
 		
 		//world 内の オブジェクトの識別子
-		const WORLD_OBJ_SEA:int	= 0;		//海
-		const WORLD_OBJ_CONTINENT:int = 1; 	//陸地
-		const WORLD_OBJ_FOREST:int = 2;		//森
-		const WORLD_OBJ_MONTAIN:int = 3;	//山
-		const WORLD_OBJ_RIVER:int = 4;		//川、湖
-		const WORLD_OBJ_CASTLE:int = 5;		//城
+		const WORLD_OBJ_CASTLE:int = 3;
 		
 		//world のサイズ, BitmapData, Array
 		private var world_size_frag:int;

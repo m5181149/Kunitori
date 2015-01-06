@@ -12,7 +12,6 @@ package Game {
 	public class Window_minimap extends Window {
 		const WINDOW_SIZE:int = 10;
 
-		//コンストラクタ
 		public function Window_minimap(world : World) 
 		{
 			bmdata = new BitmapData(WINDOW_SIZE*16, WINDOW_SIZE*9,false,0x00FF00);

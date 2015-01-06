@@ -18,7 +18,5 @@ package Game {
 			bmdata = new BitmapData(WINDOW_SIZE*16, WINDOW_SIZE*9,false,0xFF0000);
 			bm = new Bitmap(this.bmdata);
 		}
-		
-		
 	}
 }

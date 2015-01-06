@@ -24,6 +24,7 @@ package World {
 		const WORLD_OBJ_FOREST:int = 2;		//森
 		const WORLD_OBJ_MONTAIN:int = 3;	//山
 		const WORLD_OBJ_RIVER:int = 4;		//川、湖
+		
 		const WORLD_OBJ_CASTLE:int = 5;		//城
 		
 		//world のサイズ, BitmapData, Array

@@ -15,6 +15,7 @@ package Game {
 		//コンストラクタ
 		public function Window_minimap(world : World) 
 		{
+			
 			bmdata = new BitmapData(WINDOW_SIZE*16, WINDOW_SIZE*9,false,0x00FF00);
 			bm = new Bitmap(this.bmdata);
 			bm.y = 225;
