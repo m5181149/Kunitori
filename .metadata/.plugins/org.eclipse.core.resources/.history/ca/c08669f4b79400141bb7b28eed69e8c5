@@ -1,0 +1,32 @@
+package Game {
+	
+	import World.World;
+	import Game.Window;
+	
+	/**
+	 * @author yuki
+	 */
+	
+	//Game オブジェクト
+	public class Game {
+		
+		private var window_map:Window ;
+		private var world:World;
+		
+		//コンストラクタ
+		public function Game()
+		{
+
+			window = new Window();
+			world = new World(0);
+			//
+		}
+		
+		public function returnWindow():Window
+		{
+			return this.window;
+		}
+		
+
+	}
+}

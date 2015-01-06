@@ -1,0 +1,35 @@
+package Game {
+	
+	import Game.Window;
+	
+	/**
+	 * @author yuki
+	 */
+	
+	//Game オブジェクト
+	public class Game {
+		private const var MIN_WORLD_FRAG:int 0;
+		private const var SMALL_WORLD_FRAG:int 1;
+		private const var MEDIUM_WORLD_FRAG:int 2;
+		private const var LARGE_WORLD_FRAG:int 3;
+		
+		
+		private var window:Window ;
+		
+		//コンストラクタ
+		public function Game()
+		{
+
+			window = new Window();
+
+			//
+		}
+		
+		public function returnWindow():Window
+		{
+			return this.window;
+		}
+		
+
+	}
+}

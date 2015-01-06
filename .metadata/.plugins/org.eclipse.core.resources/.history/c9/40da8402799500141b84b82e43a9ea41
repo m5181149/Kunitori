@@ -1,0 +1,11 @@
+package World {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	/**
+	 * @author yuki
+	 */
+	public class Map {
+		protected var bmdata:BitmapData;
+		protected var bm:Bitmap;
+	}
+}

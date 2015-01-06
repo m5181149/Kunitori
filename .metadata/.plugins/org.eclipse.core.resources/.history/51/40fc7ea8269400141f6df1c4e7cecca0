@@ -1,0 +1,23 @@
+package Game {
+	import flash.display.Sprite;
+	import Game.Window;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Game extends Sprite {
+		private var world:World;	
+		private var window:Window;
+		
+		
+		
+		public function Game()
+		{
+			var world:World = new World();
+			var window:Window = new Window(world);
+
+			addChild(window.returnBM());
+		}
+	}
+}

@@ -1,0 +1,38 @@
+package Game {
+	
+	import World.World;
+	import Game.Window;
+	
+	/**
+	 * @author yuki
+	 */
+	
+	//Game オブジェクト
+	public class Game {
+		
+		//
+		private var window_map:Window_map ;
+		private var window_minimap:Window_minimap;
+		private var world:World;
+		
+		//コンストラクタ
+		public function Game()
+		{
+			world = new World(0);
+			window_map = new Window_map(world);
+			window_minimap = new Window_minimap();
+			//
+		}
+		
+		public function returnWindow_map():Window
+		{
+			return this.window_map;
+		}
+		
+		public function returnWindow_minimap():Window
+		{
+			return this.window_minimap;
+		}
+
+	}
+}

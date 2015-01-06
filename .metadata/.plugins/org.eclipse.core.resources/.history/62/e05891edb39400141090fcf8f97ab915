@@ -1,0 +1,58 @@
+package World {
+	import flash.display.BitmapData;
+	
+	/**
+	 * @author yuki
+	 */
+
+	public class World {
+		const MIN_WORLD_FRAG:int = 0;
+		const SMALL_WORLD_FRAG:int = 1;
+		const MEDIUM_WORLD_FRAG:int = 2;
+		const LARGE_WORLD_FRAG:int = 3;
+		
+		const WORLD_SIZE_MIN:int = 40;
+		const WORLD_SIZE_SMALL:int = 100;
+		const WORLD_SIZE_MEDIUM:int = 300;
+		const WORLD_SIZE_LARGE:int = 500;
+		
+		//BitmapData  作成
+		private var world_map : BitmapData;
+		private var world_data:Array;
+		
+		//コンストラクタ
+		public function World(WORLD_SIZE:int)
+		{
+			trace('World');
+			
+			switch(WORLD_SIZE)
+			{
+				case MIN_WORLD_FRAG:
+					world_map = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0040C0);
+					break;
+					
+				case SMALL_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_SMALL*16, WORLD_SIZE_SMALL*9, false, 0x0040C0);
+					break;
+					
+				case MEDIUM_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_SMALL*16, WORLD_SIZE_SMALL*9, false, 0x0040C0);
+					break;
+					
+				case LARGE_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_SMALL*16, WORLD_SIZE_SMALL*9, false, 0x0040C0);
+					break;
+										
+			}
+			world_map = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0040C0);
+		}
+		
+		//BitmapData のreturn
+		public function returnMap():BitmapData
+		{
+			return this.world_map;
+		}
+		
+		
+	}
+}

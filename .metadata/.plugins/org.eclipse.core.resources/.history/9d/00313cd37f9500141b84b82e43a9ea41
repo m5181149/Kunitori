@@ -1,0 +1,21 @@
+package World {
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	/**
+
+	 * @author yuki
+	 * bitmap に表示される, 1マス分のデータ
+	 */
+	public class Map {
+		protected var bmdata:BitmapData = new BitmapData(9,9);
+		protected var bm:Bitmap;
+	}
+	public function Map()
+	{
+	
+	}
+	public function returnBMdata():BitmapData
+	{
+		return this.bmdata;
+	}
+}

@@ -1,0 +1,14 @@
+package World {
+	import flash.display.Bitmap;
+	import World.Map;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Map_Mountain extends Map {
+		
+		public function Map_Mountain() {
+			bmdata = new Bitmap(9,9,false,0x000000);
+		}
+	}
+}

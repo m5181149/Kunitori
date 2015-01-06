@@ -1,0 +1,13 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 */
+	public class Country 
+	{
+		private var x:int;
+		private var y:int;
+		
+		
+	}
+}

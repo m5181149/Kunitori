@@ -1,0 +1,12 @@
+package Game {
+	import Game.Window;
+
+	/**
+	 * @author yuki
+	 */
+	public class Window_GUI extends Window {
+		const WINDOW_SIZE:int = 10
+		public function Window_GUI() {
+		}
+	}
+}

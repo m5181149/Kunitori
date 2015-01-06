@@ -1,0 +1,25 @@
+package com.powerflasher.SampleApp.World {
+	import flash.display.BitmapData;
+	/**
+	 * @author yuki
+	 */
+
+	public class World {
+		const WORLD_SIZE_MIN:int = 100;
+		const WORLD_SIZE_SMALL:int = 200;
+		const WORLD_SIZE_MEDIUM:int = 400;
+		const WORLD_SIZE_LARGE:int = 1000;
+		//BitmapData  作成
+		private var world : BitmapData;
+		
+		public function World()
+		{
+			this.world = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0000FF);
+		}
+		
+		public function returnMap()
+		{
+			return this.world;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+package com.powerflasher.SampleApp {
+	import flash.display.Bitmap;
+	import flash.display.Sprite;
+
+	//import Game.Window;
+	import World.World;
+		import flash.display.StageDisplayState;
+	import flash.display.Sprite;
+	import flash.display.Stage;
+	import flash.display.DisplayObject;
+	import flash.events.MouseEvent;
+
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Kunitori extends Sprite {
+		public function Kunitori() {
+			var world:World = new World();
+			var bm:Bitmap = new Bitmap(world.returnMap());
+			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+			
+			addChild(bm);
+			
+		}
+	}
+}

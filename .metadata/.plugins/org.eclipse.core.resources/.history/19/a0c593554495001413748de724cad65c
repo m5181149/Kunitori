@@ -1,0 +1,21 @@
+package Game {
+	import flash.display.BitmapData;
+	import flash.display.Bitmap;
+	import Game.Window;
+
+	import World.World;
+
+	/**
+	 * @author yuki
+	 * world の map 拡大, 縮小機能付き
+	 */
+	public class Window_map extends Window {
+		const Window_size:int = 50;
+		
+		public function Window_map(world : World) 
+		{
+			bmdata = new BitmapData();
+			bm = new Bitmap(world.returnMap());
+		}
+	}
+}

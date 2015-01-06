@@ -1,0 +1,29 @@
+package Game {
+	
+	import Game.Window;
+	
+	/**
+	 * @author yuki
+	 */
+	
+	//Game オブジェクト
+	public class Game {
+		private var window:Window ;
+		
+		//コンストラクタ
+		public function Game()
+		{
+
+			window = new Window();
+
+			//
+		}
+		
+		public function returnWindow():Window
+		{
+			return this.window;
+		}
+		
+
+	}
+}

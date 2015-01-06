@@ -1,0 +1,17 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 */
+	public class Country 
+	{
+		private var x:int;
+		private var y:int;
+		
+		
+		public function returnX():int
+		{
+			return this.x;
+		}
+	}
+}
