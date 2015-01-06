@@ -1,9 +1,8 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=FETCH_HEAD
 com.powerflasher.fdt.ui.fdtVersion=1.14.391.1760
 eclipse.preferences.version=1
 fdtUserUuid=2f1adeef-b6fa-44ab-98e7-c4fa315d9a25
-<<<<<<< HEAD
-pack=2
-=======
-pack=12
->>>>>>> FETCH_HEAD
+pack=13
 showWelcomeScreenOnStartUpAlways=false
