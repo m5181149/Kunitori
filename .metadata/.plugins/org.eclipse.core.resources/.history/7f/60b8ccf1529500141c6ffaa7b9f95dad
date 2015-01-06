@@ -1,4 +1,5 @@
 package World {
+	import flash.display.BitmapData;
 	
 	/**
 	 * @author yuki

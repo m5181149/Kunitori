@@ -1,4 +1,5 @@
 package World {
+	import flash.display.BitmapData;
 	
 	/**
 	 * @author yuki
@@ -21,6 +22,7 @@ package World {
 		//world のサイズ, BitmapData, Array
 		private var world_size_frag:int;
 		private var world_size:int;
+		private var world_map : BitmapData;
 		private var world_data:Array;
 		
 		public function World(WORLD_SIZE:int)
