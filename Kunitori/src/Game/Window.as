@@ -1,43 +1,53 @@
 package Game {
+	import flash.ui.Keyboard;
 	import flash.display.Bitmap;
+	import flash.display.BitmapData;
 	import flash.display.StageDisplayState;
-	import flash.display.Sprite;
+//	import flash.display.Sprite;
 	import flash.display.Stage;
-	import flash.display.DisplayObject;
+//	import flash.display.DisplayObject;
 	import flash.events.MouseEvent;
-
+	import flash.events.KeyboardEvent;
 	import World.World;
 	
 	/**
 	 * @author yuki
+	 *	GUI などを作る予定
 	 */
 	public class Window{
-		private var bm:Bitmap;
-		private var stage:Stage;
+		protected var bmdata:BitmapData;
+		protected var bm:Bitmap;
+		protected var stage:Stage;
 		
 		// コンストラクタ
+/*
 		public function Window(world:World)
 		{
 			// world から, Bitmap を作成する.
 //			trace('Window');
-			world = new World();
+//			var world:World = new World(0);
 			bm = new Bitmap(world.returnMap());
 //			var object:Sprite = new Sprite();
 //			trace(object.stage);
 //			addChild(object);
 //			trace(object.stage);
 //			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+//			stage.addEventListener(KeyboardEvent.KEY_DOWN, keydown);
 //			stage.displayState = StageDisplayState.FULL_SCREEN;
 		}
-		
+*/		
 		//Bitmap の return
 		public function returnBM():Bitmap
 		{
 			return this.bm;
 		}
+		//Bitmapdata のreturn
+		public function returnBMdata():BitmapData
+		{
+			return this.bmdata;
+		}
 		
-		
-		//マウスボタンが押されたら, スクリーンの大きさを切り替える
+		// ***for test マウスボタンが押されたら, スクリーンの大きさを切り替える
 		public function onMouseDown():void
 		{
 			if (stage.displayState == StageDisplayState.FULL_SCREEN)
@@ -50,5 +60,23 @@ package Game {
 			}
 		
 		}
+		
+		// keyboard イベント
+		public function keydown(event:KeyboardEvent):void
+		{
+			
+			// "Z" key が押されたら　拡大
+			if(event.keyCode == Keyboard.Z)
+			{
+				
+			}
+			
+			// "z" key が押されたら 縮小
+			if(event.keyCode == Keyboard.Z - 26)
+			{
+				
+			}
+		}
+		
 	}
 }
