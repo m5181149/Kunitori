@@ -1,0 +1,151 @@
+package World 
+{
+	import flash.display.BitmapData;
+	
+	/**
+	 * @author yuki
+	 * 世界のデータが格納されている
+	 */
+
+	public class World 
+	{
+		//どの大きさのworld を生成するか を示すフラグ
+		const WORLD_FRAG_MIN:int = 0;
+		const WORLD_FRAG_SMALL:int = 1;
+		const WORLD_FRAG_MEDIUM:int = 2;
+		const WORLD_FRAG_LARGE:int = 3;
+		
+		//world の大きさ (縦横比 は 9:16)
+		const WORLD_SIZE_MIN:int = 10;
+		const WORLD_SIZE_SMALL:int = 20;
+		const WORLD_SIZE_MEDIUM:int = 30;
+		const WORLD_SIZE_LARGE:int = 50;
+		
+		//world 内の オブジェクトの識別子
+		const WORLD_OBJ_SEA:int	= 0;		//海
+		const WORLD_OBJ_CONTINENT:int = 1; 	//陸地
+		const WORLD_OBJ_FOREST:int = 2;		//森
+		const WORLD_OBJ_MOUNTAIN:int = 3;	//山
+		const WORLD_OBJ_RIVER:int = 4;		//川、湖
+		const WORLD_OBJ_CASTLE:int = 5;		//城
+		
+		//world 内のオブジェクトの Map クラス
+		const WORLD_MAP_SEA:Map_Sea = Map_Sea;
+		const WORLD_MAP_LAND:Map_Land = Map_Land;
+		const WORLD_MAP_FOREST:Map_Forest = Map_Forest;
+		const WORLD_MAP_MOUNTAIN:Map_Mountain = Map_Mountain;
+		const WORLD_MAP_RIVER:Map_River = Map_River;
+		const WORLD_MAP_CASTLE:Map_Castle = Map_Castle;
+
+
+		//world のサイズの判別フラグ, world のサイズ, world の内部データ, world のbitmapdata
+		private var world_size_frag:int;
+		private var world_size:int;
+		private var world_data:Array;
+		private var world_bmdata:BitmapData;
+		
+		//コンストラクタ: WORLD_SIZE に応じた大きさの world を生成
+		public function World(WORLD_SIZE:int)
+		{
+			var i:int;
+			switch(WORLD_SIZE)
+			{
+				case WORLD_FRAG_MIN:
+					world_size_frag = WORLD_FRAG_MIN;
+					world_size = WORLD_SIZE_MIN;
+					
+					world_data = new Array(WORLD_SIZE_MIN*9);
+					for(i=0 ; i<WORLD_SIZE_MIN * 9 ; i++)
+						world_data[i] = new Array(WORLD_SIZE_MIN * 16);
+
+					world_bmdata = new BitmapData(WORLD_SIZE_MIN*16*9, WORLD_SIZE_MIN*9*9);
+
+					break;
+					
+				case WORLD_FRAG_SMALL :
+					world_size_frag = WORLD_FRAG_SMALL;
+					world_size = WORLD_SIZE_SMALL;
+					
+					world_data = new Array(WORLD_SIZE_SMALL*9);
+					for(i=0 ; i<WORLD_SIZE_SMALL * 9 ; i++)
+						world_data[i] = new Array(WORLD_SIZE_SMALL * 16);
+
+					world_bmdata = new BitmapData(WORLD_SIZE_SMALL*16*9, WORLD_SIZE_SMALL*9*9);
+
+					break;
+					
+				case WORLD_FRAG_MEDIUM :
+					world_size_frag = WORLD_FRAG_MEDIUM;
+					world_size = WORLD_SIZE_MEDIUM;
+					
+					world_data = new Array(WORLD_SIZE_MEDIUM*9);
+					for(i=0 ; i<WORLD_SIZE_MEDIUM * 9 ; i++)
+						world_data[i] = new Array(WORLD_SIZE_MEDIUM * 16);
+
+					world_bmdata = new BitmapData(WORLD_SIZE_MEDIUM*16*9, WORLD_SIZE_MEDIUM*9*9);
+
+					break;
+					
+				case WORLD_FRAG_LARGE :
+					world_size_frag = WORLD_FRAG_LARGE;
+					world_size = WORLD_SIZE_LARGE;
+					
+					world_data = new Array(WORLD_SIZE_LARGE*9);
+					for(i=0 ; i<WORLD_SIZE_LARGE * 9 ; i++)
+						world_data[i] = new Array(WORLD_SIZE_LARGE * 16);
+
+					world_bmdata = new BitmapData(WORLD_SIZE_LARGE*16*9, WORLD_SIZE_LARGE*9*9);
+
+					break;
+				default:
+					break;			
+			}
+		}
+		
+		//worldSizeFrag のreturn
+		public function returnWorldSizeFrag():int
+		{
+			return this.world_size_frag;
+		}
+		
+		//worldSize のreturn
+		public function returnWorldSize():int
+		{
+			return this.world_size;
+		}
+	
+		//world_data のreturn
+		public function returnData():Array
+		{
+			return this.world_data;
+		}
+		
+		//world を海で埋める
+		public function fillbysea():void
+		{
+			// i: 縦, j: 横
+			var i:int, j:int;
+			
+			
+			for(i=0 ; i<this.world_size*9 ; i++)
+			{
+				for(j=0 ; j<this.world_size*16 ; j++)
+				{
+					this.world_data[i][j] = WORLD_OBJ_SEA;
+				}
+				
+			}
+			
+			
+		}
+		
+		//world に大陸を作る
+		
+		
+		//world に森, 山, 川, 湖を作る
+		
+		
+		//world に国を作る
+
+	}
+}

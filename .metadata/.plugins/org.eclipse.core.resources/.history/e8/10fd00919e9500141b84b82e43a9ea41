@@ -1,0 +1,9 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 */
+	public class Country 
+	{
+	}
+}

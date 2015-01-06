@@ -1,0 +1,65 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 * 陸地のクラス(2次元配列)
+	 */
+	public class Land 
+	{
+		//中心地からの距離の最大, 最小値 max_dist はworldのサイズによって変更する予定
+		const MAX_DIST_MIN:int = 10;
+		const MAX_DIST_SMALL:int = 15;
+		const MAX_DIST_MEDIUM:int = 20;
+		const MAX_DIST_LARGE:int = 30;
+		
+		const MIN_DIS:int = 2;
+		
+		
+		//陸地か海かのフラグ
+		const FRAG_SEA = 0;			//海
+		const FRAG_LAND = 1;		//陸
+		const FRAG_FOREST = 2;		//森
+		const FRAG_MOUNTAIN = 3;	//山
+		const FRAG_RIVER = 4;		//湖, 川
+		const FRAG_COUNTRY = 5;		//国
+				
+		//大陸の中心地
+//		private var x:int, y:int;
+		//中心地からの最大距離
+		private var max_dist:int;
+		//国家のarray
+		private var countries:Array;
+		//大陸の配列データ
+		private var landdata:Array;
+		
+		public function Land(world_size_frag:int)
+		{
+//			this.x = in_x;
+//			this.y = in_y;
+			switch(world_size_frag)
+			{
+				//min
+				case 0:
+					this.max_dist = MAX_DIST_MIN;
+				break;
+				
+				//small
+				case 1:
+				break;
+				
+				//medium
+				case 2:
+				break;
+				
+				//large
+				case 3:
+				break;
+				
+				default:
+				break;
+			}
+		}
+		
+		
+	}
+}

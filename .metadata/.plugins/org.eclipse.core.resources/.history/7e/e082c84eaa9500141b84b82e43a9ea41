@@ -1,0 +1,11 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 */
+	public class Land 
+	{
+		//大陸の中心地
+		private var x:int, y:int;
+	}
+}

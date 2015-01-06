@@ -1,0 +1,27 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 * 陸地のクラス(2次元配列)
+	 */
+	public class Land 
+	{
+		//中心地からの距離の最大, 最小値
+		const MAX_DIST:int = 10;
+		const MIN_DIS:int = 2;
+		
+		
+		//大陸の中心地
+		private var x:int, y:int;
+		//国家のarray
+		private var countries:Array;
+		
+		public function Land(in_x:int, in_y:int)
+		{
+			this.x = in_x;
+			this.y = in_y;
+		}
+		
+		
+	}
+}

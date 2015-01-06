@@ -1,0 +1,65 @@
+package Game {
+	import flash.ui.Keyboard;
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.StageDisplayState;
+//	import flash.display.Sprite;
+	import flash.display.Stage;
+//	import flash.display.DisplayObject;
+	import flash.events.MouseEvent;
+	import flash.events.KeyboardEvent;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 *	GUI などを作る予定
+	 */
+	public class Window{
+		protected var bmdata:BitmapData;
+		protected var bm:Bitmap;
+		protected var stage:Stage;
+
+		//Bitmap の return
+		public function returnBM():Bitmap
+		{
+			return this.bm;
+		}
+		//Bitmapdata のreturn
+		public function returnBMdata():BitmapData
+		{
+			return this.bmdata;
+		}
+		
+		// ***for test マウスボタンが押されたら, スクリーンの大きさを切り替える
+		public function onMouseDown():void
+		{
+			if (stage.displayState == StageDisplayState.FULL_SCREEN)
+			{
+				stage.displayState = StageDisplayState.NORMAL;
+			}
+			else
+			{
+				stage.displayState = StageDisplayState.FULL_SCREEN;
+			}
+		
+		}
+		
+		// keyboard イベント
+		public function keydown(event:KeyboardEvent):void
+		{
+			
+			// "Z" key が押されたら　拡大
+			if(event.keyCode == Keyboard.Z)
+			{
+				
+			}
+			
+			// "z" key が押されたら 縮小
+			if(event.keyCode == Keyboard.Z - 26)
+			{
+				
+			}
+		}
+		
+	}
+}

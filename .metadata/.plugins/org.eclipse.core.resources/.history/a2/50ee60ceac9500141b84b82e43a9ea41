@@ -1,0 +1,17 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 * 陸地のクラス
+	 */
+	public class Land 
+	{
+		//中心地からの距離の最大, 最小値
+		const MAX_DIST:int = 10;
+		const MIN_DIS:int = 2;
+		
+		
+		//大陸の中心地
+		private var x:int, y:int;
+	}
+}

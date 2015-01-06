@@ -1,0 +1,30 @@
+package World 
+{
+	/**
+	 * @author yuki
+	 */
+	public class Country 
+	{
+		private var x:int;
+		private var y:int;
+		
+		//コンストラクタ
+		public function Country(x:int, y:int)
+		{
+			this.x = x;
+			this.y = y;
+		}
+		//x座標の return
+		public function returnX():int
+		{
+			return this.x;
+		}
+		//y座標の return
+		public function returnY():int
+		{
+			return this.y;
+		}
+				
+		
+	}
+}
