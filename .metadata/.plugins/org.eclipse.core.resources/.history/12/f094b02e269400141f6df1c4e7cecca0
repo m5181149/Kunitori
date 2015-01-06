@@ -1,0 +1,54 @@
+package Game {
+	import flash.display.Bitmap;
+	import flash.display.StageDisplayState;
+	import flash.display.Sprite;
+	import flash.display.Stage;
+	import flash.display.DisplayObject;
+	import flash.events.MouseEvent;
+
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Window extends Sprite{
+		private var world:World;
+		private var bm:Bitmap;
+		
+		
+		//Window クラスに Sprite クラスをつなげる
+		public function Window(world:World)
+		{
+			trace('Window');
+			world = new World();
+			bm = new Bitmap(world.returnMap());
+//			var object:Sprite = new Sprite();
+//			trace(object.stage);
+//			addChild(object);
+//			trace(object.stage);
+//			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+//			stage.displayState = StageDisplayState.FULL_SCREEN;
+		}
+		
+		//
+		public function returnBM():Bitmap
+		{
+			return this.bm;
+		}
+		
+		public function onMouseDown():void
+		{
+			if (stage.displayState == StageDisplayState.FULL_SCREEN)
+			{
+				stage.displayState = StageDisplayState.NORMAL;
+				// stage.displayState = "normal";
+			}
+			else
+			{
+				stage.displayState = StageDisplayState.FULL_SCREEN;
+				// stage.displayState = "fullScreen";
+			}
+		
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package Game {
+	import Game.Window;
+
+	import World.World;
+
+	/**
+	 * @author yuki
+	 */
+	public class Window_map extends Window {
+		public function Window_map(world : World) 
+		{
+			bm = world.returnMap();
+		}
+	}
+}

@@ -1,0 +1,45 @@
+package Game {
+	
+	import flash.display.Sprite;
+	import World.World;
+	import Game.Window;
+	
+	/**
+	 * @author yuki
+	 * ゲーム部分 world, map, minimap, GUI を持つ
+	 */
+	
+	//Game オブジェクト
+	public class Game extends Sprite {
+		
+		//
+		private var window_map:Window_map ;
+		private var window_minimap:Window_minimap;
+		private var window_gui:Window_GUI;
+		private var world:World;
+		
+		//コンストラクタ
+		public function Game()
+		{
+			world = new World(0);
+			window_map = new Window_map(world);
+			window_minimap = new Window_minimap(world);
+			window_gui = new Window_GUI();
+			addChild(window_map.returnBM());
+			addChild(window_minimap.returnBM());
+			addChild(window_gui.returnBM());
+			//
+		}
+		
+		public function returnWindow_map():Window
+		{
+			return this.window_map;
+		}
+		
+		public function returnWindow_minimap():Window
+		{
+			return this.window_minimap;
+		}
+
+	}
+}

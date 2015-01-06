@@ -1,0 +1,10 @@
+package Game {
+	import flash.display.DisplayObject;
+	/**
+	 * @author yuki
+	 */
+	public class Window {
+		private var window:DisplayObject = new DisplayObject();
+		
+	}
+}

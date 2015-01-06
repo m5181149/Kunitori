@@ -1,0 +1,44 @@
+package World {
+	import flash.display.BitmapData;
+	
+	/**
+	 * @author yuki
+	 */
+
+	public class World {
+		private const var MIN_WORLD_FRAG:int = 0;
+		private const var SMALL_WORLD_FRAG:int = 1;
+		private const var MEDIUM_WORLD_FRAG:int = 2;
+		private const var LARGE_WORLD_FRAG:int =  3;
+		
+		const WORLD_SIZE_MIN:int = 40;
+		const WORLD_SIZE_SMALL:int = 100;
+		const WORLD_SIZE_MEDIUM:int = 300;
+		const WORLD_SIZE_LARGE:int = 500;
+		
+		//BitmapData  作成
+		private var world_map : BitmapData;
+		private var world:Array
+		//コンストラクタ
+		public function World(var WORLD_SIZE:int)
+		{
+			trace('World');
+			
+			switch(WORLD_SIZE)
+			{
+				case MIN_WORLD_FRAG:
+					world_map = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0040C0);
+					break;
+					
+				case SMALL_WORLD_FRAG :
+			}
+			world_map = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0040C0);
+		}
+		
+		//BitmapData のreturn
+		public function returnMap():BitmapData
+		{
+			return this.world_map;
+		}
+	}
+}

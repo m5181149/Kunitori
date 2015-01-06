@@ -1,0 +1,17 @@
+package Game {
+	import Game.Window;
+
+	import World.World;
+
+	/**
+	 * @author yuki
+	 * world の minimap. window_map が現在どの範囲を表示しているかを示す.
+	 */
+	public class Window_minimap extends Window {
+		
+		public function Window_minimap(world : World) 
+		{
+			
+		}
+	}
+}

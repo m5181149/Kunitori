@@ -1,0 +1,20 @@
+package com.powerflasher.SampleApp {
+	import flash.display.Bitmap;
+	import flash.display.Sprite;
+	import flash.display.BitmapData;
+
+	import Game.Window;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Kunitori extends Sprite {
+		public function Kunitori() {
+			var bmp:BitmapData = new BitmapData(100, 100, false, 0xFF0099);
+			var bm:Bitmap = new Bitmap(bmp);
+			addChild(bm);
+			
+		}
+	}
+}

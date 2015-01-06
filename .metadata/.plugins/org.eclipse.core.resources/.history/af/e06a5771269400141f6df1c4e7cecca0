@@ -1,0 +1,19 @@
+package Game {
+	import Game.Window;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Game {
+		private var world:World;	
+		private var window:Window;
+		
+		
+		
+		public function Game()
+		{
+			world = new World();
+		}
+	}
+}

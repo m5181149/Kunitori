@@ -1,0 +1,82 @@
+package World {
+	import flash.display.BitmapData;
+	
+	/**
+	 * @author yuki
+	 */
+
+	public class World {
+		//どの大きさのworld を生成するか
+		const MIN_WORLD_FRAG:int = 0;
+		const SMALL_WORLD_FRAG:int = 1;
+		const MEDIUM_WORLD_FRAG:int = 2;
+		const LARGE_WORLD_FRAG:int = 3;
+		
+		//world の大きさ (縦横比 は 9:16)
+		const WORLD_SIZE_MIN:int = 1;
+		const WORLD_SIZE_SMALL:int = 2;
+		const WORLD_SIZE_MEDIUM:int = 3;
+		const WORLD_SIZE_LARGE:int = 5;
+		
+		//BitmapData, Array
+		private var world_size:int;
+		private var world_map : BitmapData;
+		private var world_data:Array;
+		
+		//コンストラクタ　
+		/*
+		public function World()
+		{
+			world_map = new BitmapData(WORLD_SIZE_MIN*16*5, WORLD_SIZE_MIN*9*5, false, 0x0040C0);
+//			world_data = new Array(WORLD_SIZE_MIN*16 + WORLD_SIZE_MIN*9);
+		}
+		
+		 */
+		//コンストラクタ(world のサイズを指定可能)
+		
+		public function World(WORLD_SIZE:int)
+		{
+			trace('World');
+			
+			switch(WORLD_SIZE)
+			{
+				case MIN_WORLD_FRAG:
+					world_map = new BitmapData(WORLD_SIZE_MIN*16*5, WORLD_SIZE_MIN*9*5, false, 0x0040C0);
+					world_data = new Array(WORLD_SIZE_MIN*16 + WORLD_SIZE_MIN*9);
+					break;
+					
+				case SMALL_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_SMALL*16*5, WORLD_SIZE_SMALL*9*5, false, 0x0040C0);
+					world_data = new Array(WORLD_SIZE_SMALL*16 + WORLD_SIZE_SMALL*9);
+					break;
+					
+				case MEDIUM_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_MEDIUM*16*5, WORLD_SIZE_MEDIUM*9*5, false, 0x0040C0);
+					world_data = new Array(WORLD_SIZE_MEDIUM*16 + WORLD_SIZE_MEDIUM*9);
+					break;
+					
+				case LARGE_WORLD_FRAG :
+					world_map = new BitmapData(WORLD_SIZE_LARGE*16*5, WORLD_SIZE_LARGE*9*5, false, 0x0040C0);
+					world_data = new Array(WORLD_SIZE_LARGE*16 + WORLD_SIZE_LARGE*9);
+					break;
+				default:
+					break;			
+			}
+			//world_map = new BitmapData(WORLD_SIZE_MIN*16, WORLD_SIZE_MIN*9, false, 0x0040C0);
+		}
+		
+		//BitmapData のreturn
+		public function returnMap():BitmapData
+		{
+			return this.world_map;
+		}
+		
+		//world_data のreturn
+		
+		public function returnData():Array
+		{
+			return this.world_data;
+		}
+		
+	}
+}

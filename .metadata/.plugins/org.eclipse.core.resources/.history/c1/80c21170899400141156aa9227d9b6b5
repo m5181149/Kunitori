@@ -1,0 +1,32 @@
+package com.powerflasher.SampleApp {
+	import flash.display.Sprite;
+	import flash.events.MouseEvent;
+
+	//import Game.Game;
+	import Game.Game;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Kunitori extends Sprite {
+		
+		//ゲーム実行
+		public function Kunitori()
+		 {
+			trace('Kunitori');
+			var game:Game = new Game();
+
+			addChild(game.returnWindow().returnBM());			
+			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+			
+		}
+		
+		public function onMouseDown():void
+		{
+			trace('mousedown');
+
+		
+		}
+		
+	}
+}

@@ -1,0 +1,11 @@
+package Game {
+	import Game.Window;
+
+	/**
+	 * @author yuki
+	 */
+	public class Window_GUI extends Window {
+		public function Window_GUI() {
+		}
+	}
+}

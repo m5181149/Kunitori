@@ -1,0 +1,16 @@
+package Game {
+	import flash.display.BitmapData;
+	import Game.Window;
+
+	/**
+	 * @author yuki
+	 */
+	public class Window_GUI extends Window {
+		const WINDOW_SIZE:int = 10;
+		
+		public function Window_GUI() {
+			bmdata = new BitmapData(WINDOW_SIZE*16, WINDOW_SIZE*9,false,0xFFFFFF);
+			bm = new Bitmap(this.bmdata);
+		}
+	}
+}

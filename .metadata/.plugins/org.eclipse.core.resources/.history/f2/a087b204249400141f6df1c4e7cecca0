@@ -1,0 +1,41 @@
+package com.powerflasher.SampleApp {
+	import flash.display.Bitmap;
+	import flash.display.Sprite;
+	import flash.display.StageDisplayState;
+	import flash.events.MouseEvent;
+
+	//import Game.Window;
+	import World.World;
+	
+	/**
+	 * @author yuki
+	 */
+	public class Kunitori extends Sprite {
+		public function Kunitori()
+		 {
+			var world:World = new World();
+			var bm:Bitmap = new Bitmap(world.returnMap());
+			
+			addChild(bm);
+			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+			
+		}
+		
+		public function onMouseDown():void
+		{
+			if (stage.displayState == StageDisplayState.FULL_SCREEN)
+			{
+				stage.displayState = StageDisplayState.NORMAL;
+				trace("mousedown");
+				// stage.displayState = "normal";
+			}
+			else
+			{
+				stage.displayState = StageDisplayState.FULL_SCREEN;
+				// stage.displayState = "fullScreen";
+			}
+		
+		}
+		
+	}
+}
