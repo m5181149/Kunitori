@@ -1,15 +1,12 @@
 package com.powerflasher.SampleApp {
-	import flash.display.Bitmap;
 	import flash.display.Sprite;
-	import flash.display.StageDisplayState;
 	import flash.events.MouseEvent;
 
-	//import Game.Game;
-	import World.World;
-	import Game.Window;
+	import Game.Game;
 	
 	/**
 	 * @author yuki
+	 * ゲーム全体のクラス
 	 */
 	public class Kunitori extends Sprite {
 		
@@ -17,12 +14,12 @@ package com.powerflasher.SampleApp {
 		public function Kunitori()
 		 {
 			trace('Kunitori');
-			var world:World = new World();
-			var window:Window = new Window(world);
-
-			addChild(window.returnBM());
+			//Game オブジェクト生成
+			var game:Game = new Game();
+			//window に表示
+			//addChild(game.returnWindow_map().returnBM());			
 			
-			stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+			//stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			
 		}
 		
